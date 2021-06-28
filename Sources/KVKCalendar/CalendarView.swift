@@ -21,7 +21,7 @@ public final class CalendarView: UIView {
     
     let eventStore = EKEventStore()
     var type = CalendarType.day
-    var style: Style
+    public var style: Style
     
     private(set) var calendarData: CalendarData
     private var weekData: WeekData

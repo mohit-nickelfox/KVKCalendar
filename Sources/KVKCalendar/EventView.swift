@@ -44,13 +44,10 @@ final class EventView: EventViewGeneral {
         textFrame.size.width = textFrame.width - pointX
         textView.frame = textFrame
         textView.font = style.timeline.eventFont
-        textView.text = event.text
+        textView.attributedText = event.text
         
         if isSelected {
             backgroundColor = color
-            textView.textColor = UIColor.white
-        } else {
-            textView.textColor = event.textColor
         }
         
         textView.isHidden = textView.frame.width < 20

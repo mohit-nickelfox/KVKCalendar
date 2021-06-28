@@ -100,7 +100,7 @@ public struct Event {
     
     /// unique identifier of Event
     public var ID: String
-    public var text: String = ""
+    public var text: NSAttributedString = NSAttributedString(string: "")
     public var start: Date = Date()
     public var end: Date = Date()
     public var color: Event.Color? = Event.Color(.systemBlue) {
@@ -430,9 +430,9 @@ extension DisplayDelegate {
 // MARK: - EKEvent
 
 public extension EKEvent {
-    func transform(text: String? = nil, textForMonth: String? = nil, textForList: String? = nil) -> Event {
+    func transform(text: NSAttributedString? = nil, textForMonth: String? = nil, textForList: String? = nil) -> Event {
         var event = Event(ID: eventIdentifier)
-        event.text = text ?? title
+        event.text = text ?? NSAttributedString(string: title)
         event.start = startDate
         event.end = endDate
         event.color = Event.Color(UIColor(cgColor: calendar.cgColor))

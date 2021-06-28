@@ -380,7 +380,7 @@ public struct EventStyle {
     
     public var minimumPressDuration: TimeInterval = 0.5
     public var alphaWhileMoving: CGFloat = 0.5
-    public var textForNewEvent: String = "New Event"
+    public var textForNewEvent: NSAttributedString = NSAttributedString(string: "New Event")
     public var iconFile: UIImage? = nil
     public var colorIconFile: UIColor = .black
     public var isEnableVisualSelect: Bool = true
